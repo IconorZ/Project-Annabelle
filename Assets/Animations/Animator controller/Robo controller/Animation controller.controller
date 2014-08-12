@@ -208,6 +208,26 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110181363
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 0}
+  m_DstState: {fileID: 110227017}
+  m_TransitionDuration: .100000001
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Ground
+    m_EventTreshold: 0
+    m_ExitTime: .899999976
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1101 &110186254
 Transition:
   serializedVersion: 2
@@ -324,24 +344,21 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110227017}
-      second:
-      - {fileID: 110157240}
-    data:
-      first: {fileID: 110291774}
-      second:
-      - {fileID: 110186254}
-    data:
       first: {fileID: 0}
-      second: []
+      second:
+      - {fileID: 110181363}
     data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110198636}
     data:
-      first: {fileID: 0}
+      first: {fileID: 110291774}
       second:
-      - {fileID: 110110662}
+      - {fileID: 110186254}
+    data:
+      first: {fileID: 110227017}
+      second:
+      - {fileID: 110157240}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 24, y: 240, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
